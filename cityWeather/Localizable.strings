@@ -1,0 +1,15 @@
+/* 
+  Localizable.strings
+  cityWeather
+
+  Created by Andrea Agudo on 10/9/17.
+  Copyright © 2017 Andrea Agudo. All rights reserved.
+*/
+
+"AppName" = "CityWeather";
+
+//MapView
+"Error" = "ERROR";
+"NotExist" = "That city does not exist";
+"Ok" = "OK";
+"Search" = "Search";
