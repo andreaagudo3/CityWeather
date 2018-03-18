@@ -59,6 +59,7 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     
     @IBAction func searchAction(_ sender: Any) {        
         weatherPresenter.cityTextField = textField.text!
+        textField.endEditing(true)
         self.weatherPresenter.getLocation()
         
     }
