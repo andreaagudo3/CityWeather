@@ -32,6 +32,15 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        configureView()
+        
+        //presenter
+        weatherPresenter.attachView(self)
+
+        
+    }
+
+    func configureView() {
         //searchBtn
         searchBtn.setTitle(NSLocalizedString("Search",comment:""), for: .normal)
         
@@ -43,15 +52,14 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
         mapView.isHidden = true
         mapView.delegate = self
         
+        let tapMap = UITapGestureRecognizer(target: self, action: #selector(mapTapped))
+        mapView.addGestureRecognizer(tapMap)
+        
         //title
         titleLabel.text = NSLocalizedString("AppName",comment:"")
-        
-        //presenter
-        weatherPresenter.attachView(self)
-
-        
     }
-
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -59,9 +67,13 @@ class MapViewController: UIViewController, MKMapViewDelegate, CLLocationManagerD
     
     @IBAction func searchAction(_ sender: Any) {        
         weatherPresenter.cityTextField = textField.text!
-        textField.endEditing(true)
+        self.view.endEditing(true)
         self.weatherPresenter.getLocation()
         
+    }
+    
+    @objc func mapTapped() {
+        self.view.endEditing(true)
     }
     
 }

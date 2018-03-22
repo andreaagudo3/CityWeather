@@ -101,12 +101,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		198B97522063D13500CA75B5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4E9C75681F5DB08600315E18 /* CityWeather.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		198B97532063D14300CA75B5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4E9C75661F5DA8E500315E18 /* MapViewController.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		198B97542063D14D00CA75B5 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				4E9C756C1F5DB0A900315E18 /* WeatherPresenter.swift */,
+			);
+			name = Presenter;
+			sourceTree = "<group>";
+		};
+		198B97552063D15B00CA75B5 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				4E9C756A1F5DB09900315E18 /* WeatherService.swift */,
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
 		4E5CC1661F658E6800B4E274 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				4E9C756E1F60295700315E18 /* Extensions */,
 				4E9C75711F602A1E00315E18 /* Properties */,
 				4E5CC1671F658E9800B4E274 /* Localizable.strings */,
+				4E6F28401F5D47B300119F50 /* Info.plist */,
+				4E6F28341F5D47B300119F50 /* AppDelegate.swift */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -138,10 +172,8 @@
 			children = (
 				4E5CC1661F658E6800B4E274 /* Resources */,
 				4E6F28621F5D97B800119F50 /* Map */,
-				4E6F28341F5D47B300119F50 /* AppDelegate.swift */,
 				4E6F28381F5D47B300119F50 /* Main.storyboard */,
 				4E6F283D1F5D47B300119F50 /* LaunchScreen.storyboard */,
-				4E6F28401F5D47B300119F50 /* Info.plist */,
 				19BB8C8C204C020A0095996D /* Assets.xcassets */,
 			);
 			path = cityWeather;
@@ -168,10 +200,10 @@
 		4E6F28621F5D97B800119F50 /* Map */ = {
 			isa = PBXGroup;
 			children = (
-				4E9C75681F5DB08600315E18 /* CityWeather.swift */,
-				4E9C756A1F5DB09900315E18 /* WeatherService.swift */,
-				4E9C756C1F5DB0A900315E18 /* WeatherPresenter.swift */,
-				4E9C75661F5DA8E500315E18 /* MapViewController.swift */,
+				198B97552063D15B00CA75B5 /* Service */,
+				198B97522063D13500CA75B5 /* Model */,
+				198B97532063D14300CA75B5 /* View */,
+				198B97542063D14D00CA75B5 /* Presenter */,
 			);
 			name = Map;
 			sourceTree = "<group>";
