@@ -54,6 +54,8 @@ class WeatherPresenter {
         weatherView = nil
     }
     
+    //MARK: - Get Location
+    
     func getLocation(){
         weatherService.getLocationMapped(city: cityTextField) { response in
             self.checkLocation(data: response)
@@ -99,6 +101,8 @@ class WeatherPresenter {
             print("Se ha producido un error")
         }
     }
+    
+    //MARK: - Get Weather
     
     func getWeather() {
         weatherService.getWeatherMapped(north: self.north, west: self.west, south: self.south, east: self.east){ response in

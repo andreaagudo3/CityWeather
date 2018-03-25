@@ -200,10 +200,10 @@
 		4E6F28621F5D97B800119F50 /* Map */ = {
 			isa = PBXGroup;
 			children = (
-				198B97552063D15B00CA75B5 /* Service */,
 				198B97522063D13500CA75B5 /* Model */,
 				198B97532063D14300CA75B5 /* View */,
 				198B97542063D14D00CA75B5 /* Presenter */,
+				198B97552063D15B00CA75B5 /* Service */,
 			);
 			name = Map;
 			sourceTree = "<group>";

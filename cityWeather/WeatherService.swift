@@ -14,6 +14,8 @@ class WeatherService : NSObject {
     
     var properties: NSDictionary!
     
+    // MARK: - Location
+    
     func getLocation(parameters : [String: String],completion: @escaping (_ response: AnyObject?) -> ()){
         
         if let path = Bundle.main.path(forResource: "APIProperties", ofType: "plist") {
@@ -62,6 +64,8 @@ class WeatherService : NSObject {
      
         })
     }
+    
+    // MARK: - Weather
     
     func getWeather(parameters : [String: String],completion: @escaping (_ response: AnyObject?) -> ()){
         
